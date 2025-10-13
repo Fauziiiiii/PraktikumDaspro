@@ -41,7 +41,7 @@ public class CM1_MuhammadFauziFadillah {
         tugas2 = input.nextInt();
         
         // proses nilai akhir kedua matkul
-        nilaiAkhir1 = uts1 * 0.3 + (uas1 * 0.4) + (tugas1 * 0.3);
+        nilaiAkhir1 = (uts1 * 0.3) + (uas1 * 0.4) + (tugas1 * 0.3);
         nilaiAkhir2 = (uts2 * 0.3) + (uas2 * 0.4) + (tugas2 * 0.3);
 
         // proses nilai huruf matkul1
