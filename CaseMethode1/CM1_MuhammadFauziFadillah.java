@@ -12,7 +12,7 @@ public class CM1_MuhammadFauziFadillah {
         double nilaiAkhir1, nilaiAkhir2, rataRataNilaiAkhir;
         String nilaiHuruf1, nilaiHuruf2, statusMatkul1, statusMatkul2, statusSemester;
 
-        //INputan
+        //Inputan
         System.out.println("==== INPUT DATA MAHASISWA ====");
         System.out.print("Nama : ");
         nama = input.nextLine();
@@ -45,34 +45,34 @@ public class CM1_MuhammadFauziFadillah {
         nilaiAkhir2 = (uts2 * 0.3) + (uas2 * 0.4) + (tugas2 * 0.3);
 
         // proses nilai huruf matkul1
-        if (nilaiAkhir1 >= 80 && nilaiAkhir1 <= 100) { 
+        if (nilaiAkhir1 > 80 && nilaiAkhir1 <= 100) { 
             nilaiHuruf1 = "A"; 
-        } else if (nilaiAkhir1 >= 73) { 
+        } else if (nilaiAkhir1 > 73) { 
             nilaiHuruf1 = "B+"; 
-        } else if (nilaiAkhir1 >= 65) { 
+        } else if (nilaiAkhir1 > 65) { 
             nilaiHuruf1 = "B"; 
-        } else if (nilaiAkhir1 >= 60) { 
+        } else if (nilaiAkhir1 > 60) { 
             nilaiHuruf1 = "C+"; 
-        } else if (nilaiAkhir1 >= 50) { 
+        } else if (nilaiAkhir1 > 50) { 
             nilaiHuruf1 = "C"; 
-        } else if (nilaiAkhir1 >= 40) { 
+        } else if (nilaiAkhir1 > 40) { 
             nilaiHuruf1 = "D"; 
         } else { 
             nilaiHuruf1 = "E"; 
         }
 
         // proses nilai huruf matkul2
-        if (nilaiAkhir2 >= 80 && nilaiAkhir2 <= 100) { 
+        if (nilaiAkhir2 > 80 && nilaiAkhir2 <= 100) { 
             nilaiHuruf2 = "A"; 
-        } else if (nilaiAkhir2 >= 73) { 
+        } else if (nilaiAkhir2 > 73) { 
             nilaiHuruf2 = "B+"; 
-        } else if (nilaiAkhir2 >= 65) { 
+        } else if (nilaiAkhir2 > 65) { 
             nilaiHuruf2 = "B"; 
-        } else if (nilaiAkhir2 >= 60) { 
+        } else if (nilaiAkhir2 > 60) { 
             nilaiHuruf2 = "C+"; 
-        } else if (nilaiAkhir2 >= 50) { 
+        } else if (nilaiAkhir2 > 50) { 
             nilaiHuruf2 = "C"; 
-        } else if (nilaiAkhir2 >= 40) { 
+        } else if (nilaiAkhir2 > 40) { 
             nilaiHuruf2 = "D"; 
         } else { 
             nilaiHuruf2 = "E"; 
@@ -104,7 +104,7 @@ public class CM1_MuhammadFauziFadillah {
             if(nilaiAkhir1 >= 70 && nilaiAkhir2 >= 70){
                 statusSemester = "LULUS";
             }else{
-                statusSemester = "TIDAK LULUS (Rata-rata < 70)";
+                statusSemester = "TIDAK LULUS";
             }
         }else{
             statusSemester = "TIDAK LULUS";
