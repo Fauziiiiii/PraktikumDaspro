@@ -18,27 +18,27 @@ public class CM1_MuhammadFauziFadillah {
         nama = input.nextLine();
 
         System.out.print("NIM  : ");
-        nim = input.nextLine();
+        nim = input.next();
 
         System.out.println("\n--- Mata Kuliah 1: Algoritma dan Pemrograman ---");
         System.out.print("Nilai UTS\t: ");
-        uts1 = input.nextInt();
+        uts1 = input.nextDouble();
 
         System.out.print("Nilai UAS\t: ");
-        uas1 = input.nextInt();
+        uas1 = input.nextDouble();
 
         System.out.print("Nilai Tugas\t: ");
-        tugas1 = input.nextInt();
+        tugas1 = input.nextDouble();
 
         System.out.println("\n--- Mata Kuliah 2: Algoritma dan Pemrograman ---");
         System.out.print("Nilai UTS\t: ");
-        uts2 = input.nextInt();
+        uts2 = input.nextDouble();
 
         System.out.print("Nilai UAS\t: ");
-        uas2 = input.nextInt();
+        uas2 = input.nextDouble();
 
         System.out.print("Nilai Tugas\t: ");
-        tugas2 = input.nextInt();
+        tugas2 = input.nextDouble();
         
         // proses nilai akhir kedua matkul
         nilaiAkhir1 = (uts1 * 0.3) + (uas1 * 0.4) + (tugas1 * 0.3);
@@ -55,10 +55,12 @@ public class CM1_MuhammadFauziFadillah {
             nilaiHuruf1 = "C+"; 
         } else if (nilaiAkhir1 > 50) { 
             nilaiHuruf1 = "C"; 
-        } else if (nilaiAkhir1 > 40) { 
+        } else if (nilaiAkhir1 > 39) { 
             nilaiHuruf1 = "D"; 
-        } else { 
+        } else if(nilaiAkhir1 >= 0){ 
             nilaiHuruf1 = "E"; 
+        } else{
+            nilaiHuruf1 = "ERROR";
         }
 
         // proses nilai huruf matkul2
@@ -72,27 +74,33 @@ public class CM1_MuhammadFauziFadillah {
             nilaiHuruf2 = "C+"; 
         } else if (nilaiAkhir2 > 50) { 
             nilaiHuruf2 = "C"; 
-        } else if (nilaiAkhir2 > 40) { 
+        } else if (nilaiAkhir2 > 39) { 
             nilaiHuruf2 = "D"; 
-        } else { 
+        } else if(nilaiAkhir2 >= 0 ){ 
             nilaiHuruf2 = "E"; 
+        } else{
+            nilaiHuruf2 = "ERROR";
         }
 
 
         // proses status kelulusan matkul
 
         // matkul1
-        if(nilaiAkhir1 >= 60){
+        if(nilaiAkhir1 >= 60 && nilaiAkhir1 <= 100){
             statusMatkul1 = "LULUS";
-        }else{
+        }else if(nilaiAkhir1 >= 0){
             statusMatkul1 = "TIDAK LULUS";
+        }else{
+            statusMatkul1 = "ERROR";
         }
 
         // matkul2
-        if(nilaiAkhir2 >= 60){
+        if(nilaiAkhir2 >= 60 && nilaiAkhir2 <= 100){
             statusMatkul2 = "LULUS";
-        }else{
+        }else if(nilaiAkhir2 >= 0){
             statusMatkul2 = "TIDAK LULUS";
+        } else{
+            statusMatkul2 = "ERROR";
         }
 
 
