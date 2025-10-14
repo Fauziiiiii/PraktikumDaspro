@@ -8,9 +8,9 @@ public class CM1_MuhammadFauziFadillah {
         Scanner input = new Scanner(System.in);
         
         String nama, nim;
-        int uts1, uts2, uas1, uas2, tugas1, tugas2;
-        double nilaiAkhir1, nilaiAkhir2, rataRataNilaiAkhir;
-        String nilaiHuruf1, nilaiHuruf2, statusMatkul1, statusMatkul2, statusSemester;
+        double uts1, uts2, uas1, uas2, tugas1, tugas2, nilaiAkhir1, nilaiAkhir2, rataRataNilaiAkhir;
+        String nilaiHuruf1, nilaiHuruf2, statusMatkul1, statusMatkul2, statusSemester,
+        formatUts1, formatUts2, formatUas1, formatUas2, formatTugas1, formatTugas2, formatNilaiAkhir1, formatNilaiAkhir2, formatRataRataNilaiAkhir;
 
         //Inputan
         System.out.println("==== INPUT DATA MAHASISWA ====");
@@ -101,7 +101,7 @@ public class CM1_MuhammadFauziFadillah {
 
         // proses kelulusan semester
         if(statusMatkul1 == "LULUS" && statusMatkul2 == "LULUS"){
-            if(nilaiAkhir1 >= 70 && nilaiAkhir2 >= 70){
+            if(rataRataNilaiAkhir >= 70){
                 statusSemester = "LULUS";
             }else{
                 statusSemester = "TIDAK LULUS";
@@ -109,6 +109,16 @@ public class CM1_MuhammadFauziFadillah {
         }else{
             statusSemester = "TIDAK LULUS";
         }
+
+        formatUts1 = String.format("%.2f", uts1);
+        formatUts2 = String.format("%.2f", uts2);
+        formatUas1 = String.format("%.2f", uas1);
+        formatUas2 = String.format("%.2f", uas2);
+        formatTugas1 = String.format("%.2f", tugas1);
+        formatTugas2 = String.format("%.2f", tugas2);
+        formatNilaiAkhir1 = String.format("%.2f", nilaiAkhir1);
+        formatNilaiAkhir2 = String.format("%.2f", nilaiAkhir2);
+        formatRataRataNilaiAkhir = String.format("%.2f", rataRataNilaiAkhir);
 
 
         // output hasil penilaian akademik
@@ -118,10 +128,10 @@ public class CM1_MuhammadFauziFadillah {
 
         System.out.println("\nMata Kuliah\t\tUTS\tUAS\tTugas\tNilai Akhir\tNilai Huruf\tStatus");
         System.out.println("--------------------------------------------------------------------");
-        System.out.println("Algoritma Pemrograman\t" + uts1 + "\t" + uas1 + "\t" + tugas1 + "\t" + nilaiAkhir1 + "\t\t" + nilaiHuruf1 + "\t\t" + statusMatkul1);
-        System.out.println("Struktur Data\t\t" + uts2 + "\t" + uas2 + "\t" + tugas2 + "\t" + nilaiAkhir2 + "\t\t" + nilaiHuruf2 + "\t\t" + statusMatkul2);
+        System.out.println("Algoritma Pemrograman\t" + formatUts1 + "\t" + formatUas1 + "\t" + formatTugas1 + "\t" + formatNilaiAkhir1 + "\t\t" + nilaiHuruf1 + "\t\t" + statusMatkul1);
+        System.out.println("Struktur Data\t\t" + formatUts2 + "\t" + formatUas2 + "\t" + formatTugas2 + "\t" + formatNilaiAkhir2 + "\t\t" + nilaiHuruf2 + "\t\t" + statusMatkul2);
 
-        System.out.println("\nRata-rata Nilai Akhir\t: " + rataRataNilaiAkhir); 
+        System.out.println("\nRata-rata Nilai Akhir\t: " + formatRataRataNilaiAkhir); 
         System.out.println("Status Semester \t: " + statusSemester);
 
         input.close();
