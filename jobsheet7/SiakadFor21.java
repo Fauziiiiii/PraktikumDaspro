@@ -20,6 +20,7 @@ public class SiakadFor21 {
                 terendah = nilai;
             }
 
+            // proses hitung
             if(nilai >= 60){
                 lulus++;
             }else {
