@@ -1,5 +1,3 @@
-package jobsheet7;
-
 import java.util.Scanner;
 
 public class SiakadFor21 {
