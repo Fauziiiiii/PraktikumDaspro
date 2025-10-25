@@ -1,5 +1,3 @@
-package jobsheet7;
-
 import java.util.Scanner;
 
 public class SiakadWhile21 {
@@ -38,5 +36,7 @@ public class SiakadWhile21 {
             
             i++;
         }
+
+        sc.close();
     }
 }
