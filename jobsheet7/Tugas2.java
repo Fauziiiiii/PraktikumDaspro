@@ -22,7 +22,7 @@ public class Tugas2 {
                         total += durasi * 2000;
                     }
                 }
-            }else if(jenis != 0){
+            }else if(jenis != 1 || jenis != 2){
                 System.out.println("Jenis kendaraan tidak valid. Masukkan lagi jenis yang benar");
             }
         }while(jenis != 0);
