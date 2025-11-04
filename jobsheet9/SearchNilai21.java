@@ -9,6 +9,7 @@ public class SearchNilai21 {
         int banyakNilai;
         int key;
         int hasil = 0;
+        boolean statusSearch = false;
         
         System.out.print("Masukkan banyaknya nilai yang akan diinput: ");
         banyakNilai = sc.nextInt();
@@ -26,13 +27,18 @@ public class SearchNilai21 {
         for (int i = 0; i < arrNilai.length; i++) {
             if(key == arrNilai[i]){
                 hasil = i;
+                statusSearch = true;
                 break;
             }
         }
 
-        System.out.println();
-        System.out.println("Nilai " + key + " ketemu, merupakan nilai mahasiswa ke-" + (hasil + 1));
-        System.out.println();
+        if(statusSearch){
+            System.out.println();
+            System.out.println("Nilai " + key + " ketemu, merupakan nilai mahasiswa ke-" + (hasil + 1));
+        }else{
+            System.out.println();
+            System.out.println("Nilai yang dicari tidak ditemukan");
+        }
 
         sc.close();
     }
