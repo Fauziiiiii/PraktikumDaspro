@@ -5,7 +5,15 @@ import java.util.Scanner;
 public class SIAKAD21 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[][] nilai = new int[4][3];
+        int jumlahMhs, jumlahMatkul;
+
+        System.out.print("Input jumlah Mahasiswa: ");
+        jumlahMhs = sc.nextInt();
+
+        System.out.print("Input jumlah Mata Kuliah: ");
+        jumlahMatkul = sc.nextInt();
+
+        int[][] nilai = new int[jumlahMhs][jumlahMatkul];
 
         for (int i = 0; i < nilai.length; i++) {
             System.out.println("Input nilai mahasiswa ke-" + (i + 1));
@@ -17,19 +25,19 @@ public class SIAKAD21 {
                 totalPerSiswa += nilai[i][j];
             }
 
-            System.out.println("Nilai rata-rata: " + totalPerSiswa / 3);
+            System.out.println("Nilai rata-rata: " + totalPerSiswa / jumlahMhs);
         }
 
         System.out.println("\n=======================================");
         System.out.println("Rata-rata Nilai setiap Mata Kuliah:");
-        for (int j = 0; j < 3; j++) {
+        for (int j = 0; j < jumlahMatkul; j++) {
             double totalPerMatkul = 0;
 
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < jumlahMhs; i++) {
                 totalPerMatkul += nilai[i][j];
             }
 
-            System.out.println("Mata Kuliah " + (j + 1) + ": " + totalPerMatkul / 4);
+            System.out.println("Mata Kuliah " + (j + 1) + ": " + totalPerMatkul / jumlahMatkul);
         }
         
         sc.close();
