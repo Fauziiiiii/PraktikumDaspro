@@ -67,8 +67,19 @@ public class RekapPenjualan21 {
     }
 
     public static void main(String[] args) {
-        String[] menu = {"Kopi", "Teh", "Es Kelapa Muda", "Roti Bakar", "Gorengan"};
-        int[][] dataPenjualan = new int[menu.length][7]; // 7 merupakan total hari
+        System.out.print("Masukkan jumlah menu: ");
+        int jumlahMenu = sc.nextInt();
+        System.out.print("Masukkan jumlah hari: ");
+        int jumlahHari = sc.nextInt();
+        sc.nextLine();
+
+        String[] menu = new String[jumlahMenu];
+        for (int i = 0; i < jumlahMenu; i++) {
+            System.out.print("Masukkan nama menu ke-" + (i+1) + ": ");
+            menu[i] = sc.nextLine();
+        }
+
+        int[][] dataPenjualan = new int[jumlahMenu][jumlahHari];
 
         inputData(dataPenjualan, menu);
         tampilkanData(dataPenjualan, menu);
