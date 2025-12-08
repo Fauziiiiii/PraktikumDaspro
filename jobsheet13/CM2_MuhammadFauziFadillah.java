@@ -6,8 +6,9 @@ public class CM2_MuhammadFauziFadillah {
     static Scanner sc = new Scanner(System.in);
 
     // 10 merupakan baris maksimal untuk prod, 5 merupakan jumlah field dalam data prestasi (Nama mahasiswa, NIM, Jenis prestasi, Tingkat prestasi, Tahun prestasi)
+    static int jumlahMhs = 10;
     static int jumlahKategori = 5;
-    static String[][] dataPrestasi = new String[10][jumlahKategori];
+    static String[][] dataPrestasi = new String[jumlahMhs][jumlahKategori];
     static int jumlahData = 0;
     
     public static void inputMenu(){
@@ -83,7 +84,7 @@ public class CM2_MuhammadFauziFadillah {
         }
         
         System.out.println("========================================= Data Prestasi Mahasiswa =========================================");
-        System.out.printf("%-20s %-15s %-25s %-20s %-15s%n", "Nama", "NIM", "Jenis Prestasi", "Tingkat Prestasi", "Tahun Prestasi");
+        System.out.printf("%-10s %-15s %-25s %-20s %-15s%n", "Nama", "NIM", "Jenis Prestasi", "Tingkat Prestasi", "Tahun Prestasi");
         System.out.println("===========================================================================================================");
 
         for (int i = 0; i < jumlahData; i++) {
@@ -101,7 +102,7 @@ public class CM2_MuhammadFauziFadillah {
 
     public static void cariDataPrestasi(){
         int tempJumlahData = 0;
-        String[][] tempDataPrestasi = new String[10][jumlahKategori];
+        String[][] tempDataPrestasi = new String[jumlahMhs][jumlahKategori];
 
         if(statusDataKosong()){
             return;
