@@ -84,7 +84,7 @@ public class CM2_MuhammadFauziFadillah {
         }
         
         System.out.println("========================================= Data Prestasi Mahasiswa =========================================");
-        System.out.printf("%-10s %-15s %-25s %-20s %-15s%n", "Nama", "NIM", "Jenis Prestasi", "Tingkat Prestasi", "Tahun Prestasi");
+        System.out.printf("%-20s %-15s %-25s %-20s %-15s%n", "Nama", "NIM", "Jenis Prestasi", "Tingkat Prestasi", "Tahun Prestasi");
         System.out.println("===========================================================================================================");
 
         for (int i = 0; i < jumlahData; i++) {
